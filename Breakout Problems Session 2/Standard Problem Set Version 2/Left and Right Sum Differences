@@ -1,0 +1,8 @@
+def left_right_difference(nums):
+    pass
+
+nums = [10, 4, 8, 3]
+print(left_right_difference(nums))
+
+nums = [1]
+print(left_right_difference(nums))
