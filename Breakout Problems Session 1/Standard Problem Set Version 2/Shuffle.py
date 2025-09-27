@@ -1,12 +1,10 @@
 def shuffle(cards):
-	shuffled = []
-	halfsize = len(cards) // 2
-
-	for i in range(halfsize):
-		shuffled.append(cards[i])
-		shuffled.append(cards[halfsize + i])
-	return shuffled
-
+    new = []
+    half = len(cards)//2
+    for i in range(half):
+        new.append(cards[i]) # return first
+        new.append(cards[i + half]) # return first after half mark
+    return new
 cards = ['Joker', 'Queen', 2, 3, 'Ace', 7]
 print(shuffle(cards))
 
