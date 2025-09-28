@@ -1,8 +1,9 @@
 def linear_search(lst, target):
     for i in range(len(items)):
-        if target in items[i]:
-            return(i)
+        if items[i] == target:
+            return i
     return -1
+
 
 items = ['haycorn', 'haycorn', 'haycorn', 'hunny', 'haycorn']
 target = 'hunny'
