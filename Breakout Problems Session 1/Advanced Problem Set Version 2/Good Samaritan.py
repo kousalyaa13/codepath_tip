@@ -4,16 +4,15 @@ def minimum_boxes(meals, capacity):
     # sort capacities to get largest to smallest boxes to fill the least num of boxes
 	capacity.sort(reverse = True)
 	
-	num_boxes_used = 0
-	current_cap = 0
+	box_count = 0
 	
 	for cap in capacity:
-		current_cap += cap
-		num_boxes_used += 1
+		total_meals -= cap
+		box_count += 1
 		
-        # there is more current space than the total meals
-		if current_cap >= total_meals:
-			return num_boxes_used
+        # if there are no more meals left to box
+		if total_meals <= 0:
+			return box_count
 
 meals = [1, 3, 2]
 capacity = [4, 3, 1, 5, 2]
